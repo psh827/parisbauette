@@ -1,0 +1,27 @@
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1180px;
+    }
+}
+
+#header {
+    height: 72px;
+}
+
+.nav-link {
+    display: inline;
+}
+
+.container {
+    padding: 0;
+    height: 72px;
+    line-height: 72px;
+}
+
+.carousel-item {
+    height: 100vh;
+} 
+
+.carousel-item img {
+    height: 100vh;
+}
