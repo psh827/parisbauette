@@ -1,3 +1,8 @@
+* {margin: 0; padding: 0;}
+a {
+    color: #222;
+    text-decoration: none;
+}
 #header {
     position: fixed;
     top: 0;
@@ -55,13 +60,14 @@ main .mainbanner .container {
     padding: 0;
 }
 
-.container .row {
+.mainbanner .container .row {
     flex-wrap: nowrap;
     margin: 0;
+    width: 100vw;
 }
 
 main .mainbanner .col-12 {
-    min-width: 635px;
+    /* width: 635px; */
     padding: 0;
 }
 
@@ -92,4 +98,121 @@ main .mainbanner img {
 
 .content .container {
     padding: 80px 0;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.content .container .main-title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .container .main-title h3{
+    flex: 1;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.content .container .main-title a {
+    display: block;
+    line-height: 24px;
+}
+
+.content .container .main-title span.more {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .05em;
+    border-bottom: 2px solid #111;
+}
+
+.content .container .row .card .img::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.5));
+    transition: height .3s ease-out;
+}
+.content .container.story .row .card .img::after {
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.content .container.story .row .card .col-6.md-4:hover .img::after {
+    opacity: 1;
+    height: 100%;
+    transition: opacity .1s;
+}
+
+.content .container .row .card:hover .img::after {
+    height: 100%;
+}
+
+.content .container .row .card .magazine-img-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 24px 30px;
+    color: #fff;
+}
+
+.content .container .row .card .magazine-img-text .text-title {
+    display: block;
+    color: #fff;
+}
+
+.content .container .row .card .magazine-img-text .text-title h3 {
+    font-weight: 700;
+}
+
+.content .container .row .card .magazine-img-text .text-title .text-desc {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.content .container.story .col-6:nth-child(3),.content .container.story .col-6:nth-child(4)  {
+    margin: 30px 0 0;
+}
+
+.content .container.story .col-6 .card {
+    border: 0;
+
+}
+
+.content .container.story .col-6 .card .card-body {
+    padding: 0 1.25rem;
+}
+
+.content .container.story .col-6 .card .card-body .story-text-video {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.content .container.story .col-6 .card .card-body .story-text-video p {
+    color: #023586;
+}
+
+.content .container.story .col-6 .card .card-body .story-text-title {
+    display: block;
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.content .container.story .col-6 .card .card-body .story-text-sub {
+    font-size: 13px;
+    display: block;
+    line-height: 1.575;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+}
+
+.content .container.story .col-6 .card .card-body > p {
+    font-size: 10px;
 }
