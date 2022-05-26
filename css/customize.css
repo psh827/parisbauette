@@ -141,12 +141,12 @@ main .mainbanner img {
   );
   transition: height 0.3s ease-out;
 }
-.content .container.story .row .card .img::after {
+.content .container.story .row .card .img::after, .content .container.promotion .row .card .img::after {
   opacity: 0;
   transition: opacity 0.1s;
 }
 
-.content .container.story .row .card .col-6.md-4:hover .img::after {
+.content .container.story .row .card .col-6.md-4:hover .img::after, .content .container.promotion .row .card .img:hover::after {
   opacity: 1;
   height: 100%;
   transition: opacity 0.1s;
@@ -227,6 +227,98 @@ main .mainbanner img {
   max-width: 1420px;
 }
 
+.content .container.promotion .row-wrap  {
+  position: relative;
+}
+
 .content .container.promotion .row {
   flex-wrap: nowrap;
+}
+
+.content .row .card {
+  border: 0;
+}
+
+.content .container.promotion .row .card .img {
+  position: relative;
+}
+
+.content .container.promotion .row .card .desc .promotion-title {
+  font-size: 18px;
+  line-height: 1.44;
+  margin: 10px 0 10px;
+}
+
+.content .container.promotion .row .card .desc .readmore {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: .5px;
+  color: #888;
+  display: inline-block;
+}
+
+.content .container.promotion .swiper-button-next, .content .container.promotion .swiper-button-prev {
+  top: 40%;
+  color: #ccc;
+}
+
+.content .container.promotion .swiper-button-next {
+  right: 30px;
+}
+
+.content .insta {
+  width: 100vw;
+}
+
+.content .insta .container-fluid .main-title { 
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content .insta .container-fluid .main-title h3 {
+  font-weight: 700;
+}
+
+.content .insta .container-fluid .row .col-2 {
+  padding: 0;
+}
+
+.content .insta .container-fluid .row .col-2 .card .insta-text{
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s, visibility 0.3s;
+  text-align: center;
+  box-sizing: border-box;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+}
+
+.content .insta .container-fluid .row .col-2 .card:hover .insta-text {
+  opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    padding-top: 0;
+}
+
+.content .insta .container-fluid .row .col-2 .card .insta-text .inner-text {
+  padding: 0 25px;
+}
+.content .insta .container-fluid .row .col-2 .insta-text .heart-number {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0 20px;
+}
+
+.content .insta .container-fluid .row .col-2 .insta-text svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
